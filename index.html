@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Mini Project</title>
+
+</head>
+
+<body>
+    <header class="top">
+        <h1 id="header">CSS Snippet Cheatsheet</h1>
+        <div id="subheader">Ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent
+            home and add it to this page! Select any snippet below and it'll automatically select all of the code for
+            you to copy</div>
+    </header>
+    <main id="heroGrid">
+        <div class="child" id="row">
+            <div id="headline">
+                <h2 id="flexboxRow">Flexbox Row</h2>
+                <p>Use these three properties to create a Flexbox row layout.</p>
+            </div>
+            <code>
+                <pre>
+                .row {
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap;
+                }
+                </pre>
+            </code>
+        </div>
+        <div class="child" id="column">
+            <div id="headline">
+                <h2 id="flexboxColumn">Flexbox Column</h2>
+                <p>Use this to create a Flexbox column layout.</p>
+            </div>
+            <code>
+                <pre>
+                .colum {
+                    display: flex;
+                    flex-direction: column;
+                }
+                </pre>
+            </code>
+        </div>
+        <div class="child" id="grid">
+            <div id="headline">
+                <h2 id="cssgridLayout">CSS Grid Layout</h2>
+                <p>Build a 12-column layout using CSS Grid.</p>
+            </div>
+            <code>
+                <pre>
+                .grid {
+                    display: grid;
+                    width: 100%;
+                    grid-template-columns:
+                repeat(12, 1fr);
+                }
+                </pre>
+            </code>
+        </div>
+        <div class="child" id="gradients">
+            <div id="headline">
+                <h2 id="linearGradients">Linear Gradients</h2>
+                <p>This will create a background linear gradient from top to bottom.</p>
+            </div>
+            <code>
+                <pre>
+                .linear-gradient-background {
+                    background-image: linear-gradient (
+                        rgba(232, 102, 236, 0.3) 0%,
+                        rgba(232, 102, 236, 0.6) 100%
+                        );
+                }
+                </pre>
+            </code>
+        </div>
+        <div class="child" id="transition">
+            <div id="headline">
+                <h2 id="boxTransition">Box Transition Glow</h2>
+                <p>Use transition and box shadows to glow on hover.</p>
+            </div>
+            <code>
+                <pre>
+                    .code-card .card-header {
+                        broder-radius: 8px;
+                        transition: all 0.5s ease-in-out;
+                    }
+                </pre>
+            </code>
+        </div>
+        <div class="child" id="card">
+            <div id="headline">
+                <h2 id="overlayCard">Overlay Card with Title</h2>
+                <p>Use position properties and negatice margins
+                    to raise elements higher than their natural starting point.</p>
+            </div>
+            <code>
+        <pre>
+            .card-header {
+                position: relative;
+                margin-top: -20px
+            }
+        </pre>
+     </code>
+        </div>
+    </main>
+
+    <footer class="bottom">
+        <h3 id="footer">Made with &#128151 and CSS</h3>
+    </footer>
+</body>
+
+</html>

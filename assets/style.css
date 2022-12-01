@@ -1,0 +1,88 @@
+:root {
+    --theme: #920192;
+    --text: white;
+}
+
+body {
+    background-color: rgb(58, 58, 58);
+}
+
+
+#header {
+    color: var(--theme);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#subheader {
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+#headline {
+    color: var(--theme);
+    text-align: center;
+}
+
+p {
+    color: var(--text);
+}
+
+pre {
+    color: var(--text);
+}
+
+#footer {
+    color: var(--theme);
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: flex-end;
+}
+
+
+/*Grid*/
+
+#heroGrid {
+    display: grid;
+    margin: 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "rowF        columnF       gridA"
+    "gradients  transition   card";
+}
+
+#row {
+    grid-area: rowF;
+}
+
+#column {
+    grid-area: columnF;
+}
+
+#grid {
+    grid-area: gridA;
+}
+
+#gradients {
+    grid-area: gradients;
+}
+
+#transition {
+    grid-area: transition;
+}
+
+#card {
+    grid-area: card;
+}
