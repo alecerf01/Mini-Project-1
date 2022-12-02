@@ -1,6 +1,7 @@
 :root {
-    --theme: #920192;
+    --theme: #02b6d6;
     --text: white;
+    --border: 10px;
 }
 
 body {
@@ -24,18 +25,26 @@ body {
     text-align: center;
 }
 
+.child {
+    margin-inline: 5px
+}
 
-#headline {
+
+.headline {
     color: var(--theme);
     text-align: center;
 }
 
 p {
-    color: var(--text);
+    color: var(--theme);
 }
 
 pre {
+    display: flex;
     color: var(--text);
+    background-color: var(--theme);
+    border-radius: 5px;
+    margin: 0px 20px;
 }
 
 #footer {
@@ -50,12 +59,33 @@ pre {
     align-items: flex-end;
 }
 
+/*Borders*/
+
+.headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: var(--border);
+    margin-bottom: 3px;
+    margin-left: 16.6%;
+    width: 65%;
+}
+
+
+
+.box {
+    border: 5px dashed white;
+    border-radius: var(--border);
+    height: 200px;
+    margin-top: 0;
+}
 
 /*Grid*/
 
 #heroGrid {
     display: grid;
-    margin: 20px;
+    margin: 10px;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -85,4 +115,17 @@ pre {
 
 #card {
     grid-area: card;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 700px) {
+    #heroGrid {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "rowF         columnF"
+        "gridA        gradients"
+        "transition   card";
+    }
 }

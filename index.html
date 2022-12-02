@@ -19,56 +19,57 @@
     </header>
     <main id="heroGrid">
         <div class="child" id="row">
-            <div id="headline">
-                <h2 id="flexboxRow">Flexbox Row</h2>
+            <h2 class="headline" id="flexboxRow">Flexbox Row</h2>
+            <div class="box">
                 <p>Use these three properties to create a Flexbox row layout.</p>
+                <code>
+                    <pre>
+                        .row {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                        }
+                    </pre>
+                </code>
             </div>
-            <code>
-                <pre>
-                .row {
-                  display: flex;
-                  flex-direction: row;
-                  flex-wrap: wrap;
-                }
-                </pre>
-            </code>
         </div>
         <div class="child" id="column">
-            <div id="headline">
-                <h2 id="flexboxColumn">Flexbox Column</h2>
+            <h2 class="headline" id="flexboxColumn">Flexbox Column</h2>
+            <div class="box">
                 <p>Use this to create a Flexbox column layout.</p>
+                <code>
+                    <pre>
+                        .colum {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    </pre>
+                </code>
             </div>
-            <code>
-                <pre>
-                .colum {
-                    display: flex;
-                    flex-direction: column;
-                }
-                </pre>
-            </code>
         </div>
         <div class="child" id="grid">
-            <div id="headline">
-                <h2 id="cssgridLayout">CSS Grid Layout</h2>
+            <h2 class="headline" id="cssgridLayout">CSS Grid Layout</h2>
+            <div class="box">
                 <p>Build a 12-column layout using CSS Grid.</p>
+                <code>
+                    <pre>
+                        .grid {
+                            display: grid;
+                            width: 100%;
+                            grid-template-columns:
+                            repeat(12, 1fr);
+                        }
+                    </pre>
+                </code>
             </div>
-            <code>
-                <pre>
-                .grid {
-                    display: grid;
-                    width: 100%;
-                    grid-template-columns:
-                repeat(12, 1fr);
-                }
-                </pre>
-            </code>
         </div>
         <div class="child" id="gradients">
-            <div id="headline">
-                <h2 id="linearGradients">Linear Gradients</h2>
+
+            <h2 class="headline" id="linearGradients">Linear Gradients</h2>
+            <div class="box">
                 <p>This will create a background linear gradient from top to bottom.</p>
-            </div>
-            <code>
+
+                <code>
                 <pre>
                 .linear-gradient-background {
                     background-image: linear-gradient (
@@ -78,35 +79,38 @@
                 }
                 </pre>
             </code>
+            </div>
         </div>
         <div class="child" id="transition">
-            <div id="headline">
-                <h2 id="boxTransition">Box Transition Glow</h2>
+
+            <h2 class="headline" id="boxTransition">Box Transition Glow</h2>
+            <div class="box">
                 <p>Use transition and box shadows to glow on hover.</p>
-            </div>
-            <code>
+
+                <code>
                 <pre>
                     .code-card .card-header {
                         broder-radius: 8px;
                         transition: all 0.5s ease-in-out;
                     }
                 </pre>
-            </code>
+                </code>
+            </div>
         </div>
         <div class="child" id="card">
-            <div id="headline">
-                <h2 id="overlayCard">Overlay Card with Title</h2>
+            <h2 class="headline" id="overlayCard">Overlay Card with Title</h2>
+            <div class="box">
                 <p>Use position properties and negatice margins
                     to raise elements higher than their natural starting point.</p>
+                <code>
+                        <pre>
+                            .card-header {
+                                position: relative;
+                                margin-top: -20px
+                            }
+                        </pre>
+                    </code>
             </div>
-            <code>
-        <pre>
-            .card-header {
-                position: relative;
-                margin-top: -20px
-            }
-        </pre>
-     </code>
         </div>
     </main>
 
