@@ -2,10 +2,15 @@
     --theme: #02b6d6;
     --text: white;
     --border: 10px;
+    --bordercolor: white;
 }
 
 body {
-    background-color: rgb(58, 58, 58);
+    display:flex;
+    flex-direction: column;
+    background-color: #3a3a3a;
+    user-select: none;
+    min-height: 100vh;
 }
 
 
@@ -27,7 +32,7 @@ body {
 
 .child {
     margin-inline: 5px
-}
+} 
 
 
 .headline {
@@ -37,14 +42,18 @@ body {
 
 p {
     color: var(--theme);
+    margin-left: 10px;
 }
 
 pre {
+    grid-area: 100%;
     display: flex;
     color: var(--text);
-    background-color: var(--theme);
+    background: linear-gradient(#35474b,var(--theme));
     border-radius: 5px;
-    margin: 0px 20px;
+    margin: 0px 10px;
+    padding-top: 20px;
+    user-select: text;
 }
 
 #footer {
@@ -52,11 +61,9 @@ pre {
 }
 
 .bottom {
+    margin-top: auto;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: flex-end;
 }
 
 /*Borders*/
@@ -65,18 +72,22 @@ pre {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid white;
+    border: 5px solid var(--bordercolor);
     border-radius: var(--border);
     margin-bottom: 3px;
     margin-left: 16.6%;
     width: 65%;
 }
 
+.headline:hover {
+    box-shadow: 0px 0px 20px 10px;
+    transition: all 3s;
+}
+
 
 
 .box {
-    border: 5px dashed white;
-    border-radius: var(--border);
+    border: 2px dashed var(--bordercolor);
     height: 200px;
     margin-top: 0;
 }
@@ -94,38 +105,74 @@ pre {
 }
 
 #row {
-    grid-area: rowF;
+    grid-area: 1fr "rowF";
 }
 
 #column {
-    grid-area: columnF;
+    grid-area: 1fr "columnF";
 }
 
 #grid {
-    grid-area: gridA;
+    grid-area: 1fr "gridA";
 }
 
 #gradients {
-    grid-area: gradients;
+    grid-area: 1fr "gradients";
 }
 
 #transition {
-    grid-area: transition;
+    grid-area: 1fr "transition";
 }
 
 #card {
-    grid-area: card;
+    grid-area: 1fr "card";
+}
+
+.box {
+    display: grid;
+    height: 70%;
+    margin-bottom: 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "subtext"
+    "code";
+}
+
+#subtext {
+    grid-area: "subtext";
+
+}
+
+#code {
+    grid-area: "code";
 }
 
 /* Media Queries */
 
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
     #heroGrid {
+        display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
         "rowF         columnF"
         "gridA        gradients"
         "transition   card";
+    }
+}
+
+@media screen 
+and (max-width: 690px) {
+    #heroGrid {
+        display: grid;
+        grid-template-rows: 6fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "rowF"
+        "columnF"
+        "gridA"
+        "gradients"
+        "transition"
+        "card";
     }
 }
